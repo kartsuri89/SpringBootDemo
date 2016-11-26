@@ -8,9 +8,7 @@ public class FirstGitSpringApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(FirstGitSpringApplication.class, args);
-	
-		
-		
+		System.out.println("Im Checking SpringBoot");
 		
 	}
 }
