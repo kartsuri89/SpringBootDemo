@@ -1,11 +1,18 @@
 package com.home.model;
 
-public class Employee {
+import org.springframework.data.mongodb.core.mapping.Document;
 
+@Document(collection="Employee")
+public class Employee {
+	
+	public String id;
+	
 	public String empName;
 	public Long empId;
 	public String empDesignation;
 	
+	public Employee(){}
+
 	public Employee(String empName, String empDesignation) {
 		super();
 		this.empName = empName;
@@ -33,5 +40,8 @@ public class Employee {
 		this.empDesignation = empDesignation;
 	}
 
-	
+	@Override
+	public String toString() {
+		return "Employee [empName=" + empName + ", empId=" + empId + ", empDesignation=" + empDesignation + "]";
+	}
 }
