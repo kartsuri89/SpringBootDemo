@@ -1,5 +1,6 @@
 package com.home.model;
 
+import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection="Employee")
@@ -8,7 +9,10 @@ public class Employee {
 	public String id;
 	
 	public String empName;
+	
+	//@Indexed(unique=true)
 	public Long empId;
+	
 	public String empDesignation;
 	
 	public Employee(){}

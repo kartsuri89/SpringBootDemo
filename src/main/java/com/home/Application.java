@@ -24,7 +24,8 @@ public class Application implements CommandLineRunner{
 		//repository.deleteAll();
 		System.out.println("Im inside run method");
 		
-		repository.save(new Employee("Rangaraju","Assistant accountant"));
+		
+		//repository.save(new Employee("Karthik","SE"));
 	}
 	
 }

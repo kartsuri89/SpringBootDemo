@@ -10,6 +10,6 @@ import com.home.model.Employee;
 @EnableMongoRepositories
 public interface EmployeeRepository extends MongoRepository<Employee, String> {
 	
-	public List<Employee> findAll();
+	//public List<Employee> find();
 
 }
