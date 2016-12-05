@@ -1,37 +1,60 @@
 package com.home.model;
 
-import org.springframework.data.mongodb.core.index.Indexed;
+import java.util.Date;
+
 import org.springframework.data.mongodb.core.mapping.Document;
+
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 @Document(collection="Employee")
 public class Employee {
 	
-	public String id;
-	
-	public String empName;
-	
+	private String id;
+	private String empName;
+	private Date dob;
 	//@Indexed(unique=true)
-	public Long empId;
-	
-	public String empDesignation;
+	private Long empId;
+	private String empDesignation;
 	
 	public Employee(){}
 
-	public Employee(String empName, String empDesignation) {
+	public Employee(String empName, Date dob, String empDesignation) {
 		super();
 		this.empName = empName;
+		this.dob = dob;
 		this.empDesignation = empDesignation;
 	}
-	
+
+
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
 	public String getEmpName() {
 		return empName;
 	}
+
 	public void setEmpName(String empName) {
 		this.empName = empName;
 	}
+
+	public Date getDob() {
+		return dob;
+	}
+
+	public void setDob(Date dob) {
+		this.dob = dob;
+	}
+
 	public Long getEmpId() {
 		return empId;
 	}
+
 	public void setEmpId(Long empId) {
 		this.empId = empId;
 	}
@@ -43,9 +66,9 @@ public class Employee {
 	public void setEmpDesignation(String empDesignation) {
 		this.empDesignation = empDesignation;
 	}
+	
+	
+	
+	
 
-	@Override
-	public String toString() {
-		return "Employee [empName=" + empName + ", empId=" + empId + ", empDesignation=" + empDesignation + "]";
-	}
 }
