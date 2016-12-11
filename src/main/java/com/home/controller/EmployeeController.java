@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.home.model.Employee;
 import com.home.service.UserService;
 
-
 @CrossOrigin(origins = "http://localhost:8080")
 @RestController
 public class EmployeeController {
