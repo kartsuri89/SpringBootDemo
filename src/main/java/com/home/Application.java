@@ -31,7 +31,7 @@ public class Application implements CommandLineRunner{
 		System.out.println("Im inside run method");
 		
 		
-		repository.save(new Employee("Karthik",new Date(),"CEO"));
+		//repository.save(new Employee("Karthik",new Date(),"CEO"));
 	}
 	
 }
